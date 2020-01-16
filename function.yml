@@ -1,0 +1,16 @@
+apiVersion: kubeless.io/v1beta1
+kind: Function
+metadata:
+  name: scraper
+  namespace: default
+  label:
+    created-by: kubeless
+    function: scraper
+spec:
+  runtime: python3.7
+  timeout: "180"
+  handler: scraper.main
+  deps: ""
+  checksum: sha256:8c1136a7ecf95aef19c7565b9acb3977645fe98d1f877dd2397aa6455673805e
+  function-content-type: url+zip
+  function: https://github.com/MagalixCorp/k8s-faas/blob/master/packagae.zip?raw=true
